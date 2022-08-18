@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Belajar Web</title>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        <style type="text/css">
+            * {
+                padding: 0;
+                margin: 0;
+            }
+            a {
+                color: inherit;
+                text-decoration: 0;
+            }
+            .medsos {
+                padding: 5px 0;
+                background-color: #145F8A;   
+            }
+            .medsos ul li {
+                display: inline-block;
+                color: #fff;
+                margin-right: 10px;
+            }
+            .container {
+                width: 80%;
+                margin: 0 auto;
+                
+            }
+            .container::after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+            header {
+                
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+            }
+            header h1 {
+                
+                float: left;
+                color: #145F8A;
+                padding: 15px 0;
+            }
+            header ul {
+                float: right;
+            }
+            header ul li {
+                display: inline-block;
+            }
+            header ul li a {
+                padding: 25px 20px;
+                display: inline-block;
+            }
+            header ul li a:hover {
+                background-color: #145F8A;
+                color: #fff;
+            }
+            .active {
+                background-color: #145F8A;
+                color: #fff;
+            }
+
+            section {
+                padding: 50px 0;
+            }
+            section h3 {
+                text-align: center;
+                padding: 20px;
+                color: #145F8A;
+            }
+            section h4 {
+                margin: auto;
+                color: #145F8A;
+            }
+            section tr {
+                color: #145F8A;
+                word-spacing: 2px;
+                line-height: 25px;
+            }
+            footer {
+                padding: 30px 0;
+                background-color: #333;
+                color: #fff;
+                text-align: center;
+            }
+            .bg-loader {
+                background-color: #eee;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 9999;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .bg-loader .loader {
+                width:100px;
+                height: 100px;
+                border:3px solid #fff;
+                border-radius: 50%;
+                border-top-color: #145F8A;
+                border-right-color: #145F8A;
+                border-bottom-color: #145F8A;
+                animation: puterin .8s linear infinite;
+            }
+            .label {
+                background-color: #145F8A;
+                color: #fff;
+            }
+            section img {
+              
+                padding-bottom: 20px;
+            }
+
+            @keyframes puterin {
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bg-loader">
+            <div class="loader"></div>
+        </div>
+        <!-- NAVBAR -->
+        <div class="medsos">
+            <div class="container">
+                <ul>
+                    <li><a href="https://www.instagram.com/efakhrim/"><i class="fa-brands fa-instagram"></i></i></i></a></li>
+                    <li><a href="https://twitter.com/EMuttaqiy"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/emir-fakhri-muttaqiy/"><i class="fa-brands fa-linkedin"></i></a></li>
+                </ul>
+
+            </div>
+        </div>
+        <header>
+            <div class="container">
+                <h1><a href="">WEBSITE KU</a></h1>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active"><a href="profile.html">MyProfile</a></li>
+                </ul>
+            </div>
+
+        </header>
+        <!-- NAVBAR END -->
+        <!-- label -->
+        <section class="label">
+            <div class="container">
+                <p>Home / MyProfile</p>
+            </div>
+        </section>
+        <!-- CONTENT -->
+
+        <section class="profile">
+            <div class="container">
+                <h3>MY PROFILE</h3> <br>
+                <img src="img/foto.jpg">
+                <h4>About Me</h4>
+                <table>
+                    <tr>
+                        <td>Nama</td>
+                        <td>: Emir Fakhri Muttaqiy</td>
+                    </tr>
+                    <tr>
+                        <td>TTL</td>
+                        <td>: Mojokerto, 10 Juli 2001</td>
+                    </tr>
+                    <tr>
+                        <td>Alamat</td>
+                        <td>: Ds.Tangunan, RT4/RW2, Kec.Puri, Kab.Mojokerto, Jawa Timur</td>
+                    </tr>
+                </table><br>
+                <h4>Education</h4>
+                <table>
+                    <tr>
+                        <td>SMA</td>
+                        <td>: SMAN 1 Puri Mojokerto</td>
+                    </tr>
+                    <tr>
+                        <td>Perguruan Tinggi</td>
+                        <td>: Institut Teknologi Sepuluh Nopember</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <!-- CONTENT END -->
+        <!-- FOOTER -->
+        <footer>
+            <div class="container">
+                <small>Website ini adalah tugas minggu pertama Basic Web Programming</small>
+            </div>
+        </footer>
+
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $(".bg-loader").hide();
+            })
+        </script>
+        <!-- FOOTER END -->
+    </body>
+</html>
